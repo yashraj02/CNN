@@ -24,4 +24,12 @@ Transfer learning helps when you are low on configs to run high task oriendted a
 
 ## HDF5
 HDF5 is binary data format created by the HDF5 group [12] to store gigantic numerical datasets on disk (far too large to store in memory) while facilitating easy access and computation on the rows of the datasets. Data in HDF5 is stored hierarchically, similar to how a file system stores data. Data is first defined in groups, where a group is a container-like structure which can hold datasets and other groups. Once a group has been defined, a dataset can be created within the group. A dataset can bethought of as a multi-dimensional array (i.e., a NumPy array) of a homogeneous data type (integer, float, unicode, etc.).
-This is used to save our Imgae Numpy matrics for fast retrieval & processing. It is disk as well as memory efficient as it compresses the data
+
+We can store huge amounts of data in our HDF5 dataset and manipulate the data in a NumPy-like fashion. 
+These slices and row accesses are lighting quick. When using HDF5 with h5py, you can think of your data as a gigantic NumPy array
+that is too large to fit into main memory but can still be accessed and manipulated just the same.
+
+Uses:
+1. Facilitate a method for us to apply transfer learning by taking our extracted features from
+VGG16 and writing them to an HDF5 dataset in an efficient manner.
+2. Allow us to generate HDF5 datasets from raw images to facilitate faster training.
