@@ -20,6 +20,8 @@ Once trained you can store the model using model.save("my_model.h5") into HDF5.
 
 Models Trained based on Transfer Learning can be expected to outperform in most secenarios. For code kindly look up to Transfer-Learning directory in CNN(current repo) repository.
 
+Transfer learning helps when you are low on configs to run high task oriendted algorithms from scrath.
+
 ## HDF5
 HDF5 is binary data format created by the HDF5 group [12] to store gigantic numerical datasets on disk (far too large to store in memory) while facilitating easy access and computation on the rows of the datasets. Data in HDF5 is stored hierarchically, similar to how a file system stores data. Data is first defined in groups, where a group is a container-like structure which can hold datasets and other groups. Once a group has been defined, a dataset can be created within the group. A dataset can bethought of as a multi-dimensional array (i.e., a NumPy array) of a homogeneous data type (integer, float, unicode, etc.).
 This is used to save our Imgae Numpy matrics for fast retrieval & processing. It is disk as well as memory efficient as it compresses the data
